@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { Form, Input, Button } from 'antd'
-import { inject, observer } from 'mobx-react'
+
 const FormItem = Form.Item
 
-@inject('store')
-@observer
+
 class FromBox extends Component {
     constructor(){
         super()
@@ -17,7 +16,7 @@ class FromBox extends Component {
     }
     render(){
         const { getFieldDecorator } = this.props.form
-        const { loading } = this.props.store
+        const { loading } =  false;
         return (
             <Form onSubmit={this.handleSubmit}>
 

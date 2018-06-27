@@ -2,7 +2,7 @@
   "name": "react-starter-kit",
   "version": "1.0.0",
   "description": "this is react start kit",
-  "author": "bevelery <zhengaojin@live.cn> (http://blog.csdn.net/beverley__)",
+  "author": "wuming",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dll": "cross-env NODE_ENV=production webpack -p --config webpack.dll.config.js",

@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
-import { Provider, inject, observer } from 'mobx-react'
+
 import { message } from 'antd'
 import FormBox from '../components/FormBox'
 import Cookies from 'js-cookie'
-import store from '../store'
+
 import './index.less'
 
-@inject('Store')
-@observer
 class Login extends Component {
     constructor() {
         super()
-        this.store = new store() // 在这里实例化，保证每次加载组件数据的初始化。
+        
     }
 
     submit = (form, updateLoading) => {
@@ -43,14 +41,14 @@ class Login extends Component {
 
     render() {
         return (
-            <Provider store={this.store}>
-                <div className='Login_wrap clear clearFix'>
-                    <div className='form P_auto'>
-                        <span className='font icon-react'></span>
-                        <FormBox submit={this.submit}/>
-                    </div>
+            
+            <div className='Login_wrap clear clearFix'>
+                <div className='form P_auto'>
+                    <span className='font icon-react'></span>
+                    <FormBox submit={this.submit}/>
                 </div>
-            </Provider>
+            </div>
+            
         )
     }
 }

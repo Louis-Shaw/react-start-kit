@@ -1,26 +1,24 @@
 import React, { Component } from 'react'
 import { Route, withRouter } from 'react-router-dom'
-import { observer, inject } from 'mobx-react'
+
 import { Tooltip } from 'antd'
 import routerConfig from '@/config/routes'
 import Cookies from 'js-cookie'
 import Loading from '@/components/Loading'
 
 @withRouter
-@inject('Store')
-@observer
 class Right extends Component {
     componentWillMount(){
-        let { userInfo,updateName } = this.props.Store
-        if (userInfo.name == '') {
-            updateName(Cookies.get('userName'))
-        }
+        // let { userInfo,updateName } = this.props.Store
+        // if (userInfo.name == '') {
+        //     updateName(Cookies.get('userName'))
+        // }
     }
     logout = () =>{
         this.props.logout()
     }
     render() {
-        const { name } = this.props.Store.userInfo
+        const { name } = "this.props.Store.userInfo"
         return (
             <div className='right'>
                 <div className='header clear clearFix'>

@@ -14,7 +14,7 @@ class Layouts extends Component {
         return (
             <div className='Layouts_wrap clear clearFix'>
                 <Left />
-                <Right logout={this.logout}/>
+                {/* <Right logout={this.logout}/> */}
             </div>
         )
     }
