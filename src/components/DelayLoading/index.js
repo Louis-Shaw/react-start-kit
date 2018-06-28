@@ -1,4 +1,5 @@
 import React from 'react'
+
 const  DelayLoading = ({ pastDelay, error }) => {
     if (pastDelay) {
         return <div>Loading...</div>

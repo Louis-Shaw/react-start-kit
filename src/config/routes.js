@@ -1,6 +1,7 @@
 import Loadable from 'react-loadable'
 import DelayLoading from '../components/DelayLoading'
 
+
 const Home         = Loadable({loader: () => import('../routers/Home'), loading : DelayLoading,delay:3000})
 const ModuleList   = Loadable({loader: () => import('../routers/ModuleManage/ModuleList'), loading : DelayLoading,delay:3000})
 const FunctionList = Loadable({loader: () => import('../routers/FunctionManage/FunctionList'), loading : DelayLoading,delay:3000})

@@ -7,7 +7,7 @@ class Home extends Component {
             <div className='Home_'>
             	<Cascader />
             	<Transfer/>
-
+                
                home
             </div>
         )

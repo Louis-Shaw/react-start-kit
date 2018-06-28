@@ -193,7 +193,7 @@ if (envProduction) {
         // }])
         new BundleAnalyzerPlugin(),
 
-        //球用没有 还是要服务端配置
+        // 球用没有 还是要服务端配置
         // new CompressionWebpackPlugin({
         //     asset: '[path].gz[query]',
         //     algorithm: 'gzip',

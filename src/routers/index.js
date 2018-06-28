@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import Layouts from './Layouts'
-import ReduxCp  from '../routers/redux';
+import ReduxCp  from '../routers/ReduxCp';
 import Login from './Login'
 // import store from './store'
 import configStore from '../store/store';
@@ -10,8 +10,8 @@ import Cookies from 'js-cookie'
 
 @withRouter
 class Routers extends Component {
-    constructor(props){
-        super(props)
+    constructor(props,context){
+        super(props,context)
         this.pathname = this.props.location.pathname
     }
     checkJsessionID = () =>{
@@ -35,21 +35,20 @@ class Routers extends Component {
         // } else {
         //     this.checkJsessionID()
         // }
-        this.props.history.replace('/redux')
+        this.props.history.replace('/home')
     }
     componentWillReceiveProps (){
-      this.checkJsessionID()
+    //   this.checkJsessionID()
     }
     render(){
-        const store = configStore();
+        
         return (
-            <Provider store={store}>
+            
                 <Switch>
-                    <Route path="/login" component={Login}/>
-                    <Route path='/' component={Layouts}/>
-                    <Route path="/redux" component={ReduxCp} />
+                    
+                    <Route path="/home" component={Layouts} />
                 </Switch>
-            </Provider>
+            
         )
     }
 }

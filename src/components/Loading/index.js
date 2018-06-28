@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import { inject,observer } from 'mobx-react'
 import { Spin } from 'antd'
 import './index.less'
 
 @withRouter
-@inject('Store')
-@observer
 class Loading extends Component {
     componentDidUpdate(){
         if (this.props.Store.loading) {

@@ -1,12 +1,12 @@
 //1 引入 createStore
 //2 引入 rootReducer 
-import {createStore} from 'redux';
+import {createStore ,compose} from 'redux';
 import rootReducer from '../reducer';
 
-export default function store (initialstate) {
-    const store = createStore(rootReducer , initialstate , 
-    // redux-devtools
-    window.devToolsExtension ? window.devToolsExtension() :undefined
+
+export default function store (initialstate = {}) {
+    const store = createStore(rootReducer , initialstate ,
+      window.devToolsExtension ? window.devToolsExtension() : undefined
     )
     
     if (module.hot) {
@@ -19,3 +19,5 @@ export default function store (initialstate) {
 
     return store
 }
+
+

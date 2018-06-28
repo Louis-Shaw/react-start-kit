@@ -1,18 +1,22 @@
 import * as userinfoType from '../constant/userinfo';
 
-const state= {
+const initialstate= {
     username:"xiaozhiheng",
     password:"password"
 }
-export default function userinfo (initialstate=state , action){
+export default function userinfo (state=initialstate , action){
+    
     const type = action.type;
     switch(type){
         case userinfoType.ADD_USERINFO:
             state.username += "0";
         return state;
         case userinfoType.UPDATE_USERINFO:
-            state.password = "gai"
+            
+        return   Object.assign({} , state, {username :"agesss" ,password: "ppaa"})
+        
+        default :
+        // console.log("default" , state)
         return state;
-        default :return state;
     }
 }
