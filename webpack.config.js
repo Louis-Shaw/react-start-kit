@@ -145,7 +145,7 @@ if (envDevelopment) {
         contentBase:path.resolve(project.basePath),
         
         historyApiFallback: true,
-        hot:true,
+        hot:false,
     }
 }
 

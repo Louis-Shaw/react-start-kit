@@ -45,8 +45,7 @@ class Routers extends Component {
         return (
             
                 <Switch>
-                    
-                    <Route path="/home" component={Layouts} />
+                    <Route path="/" component={Layouts} />
                 </Switch>
             
         )

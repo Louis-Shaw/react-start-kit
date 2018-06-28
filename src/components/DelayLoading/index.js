@@ -1,12 +1,10 @@
 import React from 'react'
 
 const  DelayLoading = ({ pastDelay, error }) => {
-    if (pastDelay) {
-        return <div>Loading...</div>
-    } else if (error) {
-        return <div>Sorry, there was a problem loading the page.</div>;
-    } else {
-        return null;
-    }
+    if (error) {
+        return <div>Error!</div>;
+      } else {
+        return <div>Loading...</div>;
+      }
 }
 export default DelayLoading
