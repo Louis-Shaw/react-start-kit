@@ -1,5 +1,4 @@
 import React ,{Component } from 'react';
-import { connect } from 'react-redux';
 import {bindActionCreators } from 'redux';
 import * as actions from "@/action/userinfo";
 
@@ -9,7 +8,7 @@ class ReduxCp extends Component {
     }
 
     render(){
-        const userinfo = this.props.userinfo     
+        const userinfo = this.props.userinfo
         return (
             <div>
                 <div> im reducx cp </div>

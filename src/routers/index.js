@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
-import { Provider } from 'react-redux';
 import Layouts from './Layouts'
 import ReduxCp  from '../routers/ReduxCp';
 import Login from './Login'
@@ -8,7 +7,6 @@ import Login from './Login'
 import configStore from '../store/store';
 import Cookies from 'js-cookie'
 
-@withRouter
 class Routers extends Component {
     constructor(props,context){
         super(props,context)
@@ -41,15 +39,12 @@ class Routers extends Component {
     //   this.checkJsessionID()
     }
     render(){
-        
         return (
-            
                 <Switch>
                     <Route path="/" component={Layouts} />
                 </Switch>
-            
         )
     }
 }
 
-export default Routers
+export default withRouter(Routers)
