@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(project.basePath, 'dll'),
         filename: '[name].dll.js',
-        library: '[name]_library'
+        library: '[name]_library',
         publicPath: project.publicPath
     },
     plugins: [

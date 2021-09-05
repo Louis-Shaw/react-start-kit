@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
-    "module": "es6",
+    "module": "commonjs",
     "target": "es6",
     "strict": true,
     "jsx": "react-jsx",
-    "noEmit": true,  //Do not emit compiler output files like JavaScript source code, source-maps or declarations.
+    "noEmit": false,  //Do not emit compiler output files like JavaScript source code, source-maps or declarations.
     "skipLibCheck": true, // type check *.d.ts only in you app's source code
     "isolatedModules": true, // all files must be module.
     "resolveJsonModule": true,

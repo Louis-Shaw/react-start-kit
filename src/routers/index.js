@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom'
 import Layouts from './Layouts'
-import ReduxCp  from '../routers/ReduxCp';
-import Login from './Login'
-// import store from './store'
-import configStore from '../store/store';
-import Cookies from 'js-cookie'
 
 class Routers extends Component {
     constructor(props,context){
-        super(props,context)
         this.pathname = this.props.location.pathname
     }
     checkJsessionID = () =>{

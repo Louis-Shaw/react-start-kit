@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './App.css';
-
-function Btest():React.ReactNode {
+function Btest() {
   return (
     <div>1231231</div>
   )
@@ -14,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          <Btest data={'asdf'} />
+          <Btest />
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
