@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import AppRouter from './routers';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import AppRouter from './routers'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <title>test</title>
-      </header>
+      <div className="App">
+        <p>test</p>
+      </div>
       <AppRouter/>
     </div>
   );

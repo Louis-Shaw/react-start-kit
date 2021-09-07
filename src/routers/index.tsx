@@ -2,9 +2,10 @@ import React from 'react'
 
 import { BrowserRouter as Router, Route, Link, BrowserRouter } from "react-router-dom"
 import Home from './home/home'
+import Login from './login/index'
 
 export default class AppRouter extends React.Component {
-  public render(){
+  public render():JSX.Element {
     return (
       <div>
         <Router>
@@ -14,7 +15,7 @@ export default class AppRouter extends React.Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/login">Login</Link>
               </li>
               <li>
                 <Link to="/topics">Topics</Link>
@@ -22,7 +23,7 @@ export default class AppRouter extends React.Component {
             </ul>
 
             <hr />
-
+            <Route exact path="/login" component={Login} />
             <Route exact path="/" component={Home} />
           </div>
         </Router>

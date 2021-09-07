@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+  root: './src', //TODO wrong value
   parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
@@ -8,4 +8,4 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-};
+}

@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "./dist/",
     "module": "commonjs",
+    "paths": {
+      "@": ["src"],
+      "@/*": ["src/*"]
+    },
     "target": "es6",
     "strict": true,
     "jsx": "react-jsx",
@@ -16,7 +21,8 @@
     "esModuleInterop": true,   // 第三方编译后的库多是 commonJS， ts 默认是按esModule 编写，会报错
   },
   "include": [
-    "src"
+    "src",
+    "./src/config/files.d.ts"
   ]
 }
 

@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const project = require('./project.config.js')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 
 const envDevelopment = project.env === 'development'
@@ -14,6 +15,7 @@ const devtool = project.sourceMap ? 'cheap-source-map' : false
 
 const SRC_DIR = path.join(project.basePath, project.srcDir)
 
+console.log(SRC_DIR)
 
 const config = {
   entry: {
@@ -34,7 +36,8 @@ const config = {
     alias: {
       '@': SRC_DIR
     },
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })]
   },
   module: {
     rules: [
@@ -46,11 +49,7 @@ const config = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          outputPath: "images"
-        }
+        type: 'asset/resource'
       }
     ]
   },
