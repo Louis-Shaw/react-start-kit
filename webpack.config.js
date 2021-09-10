@@ -113,13 +113,17 @@ if (envDevelopment) {
     test: /(\.less|\.css)$/,
     use: [{
       loader: "style-loader"
-    }, {
-      loader: "css-loader"
-    }, {
-      loader: "less-loader",
+    },{
+      loader: "css-loader",
       options: {
-        javascriptEnabled: true
-      }
+        modules: {
+          localIdentName: "[path][name]__[local]",
+
+        },
+        importLoaders: 1,
+      },
+    },{
+      loader: "less-loader"
     }]
   })
   // devServer不再使用 这个中间件
@@ -147,6 +151,9 @@ if (envProduction) {
       {
         loader: 'css-loader',
         options: {
+          modules: {
+            localIdentName: "[path][name]__[local]",
+          },
           importLoaders: 1,
           minimize: {
             autoprefixer: {
@@ -165,10 +172,7 @@ if (envProduction) {
         }
       },
       {
-        loader: 'less-loader',
-        options: {
-          javascriptEnabled: true
-        }
+        loader: 'less-loader'
       }
     ]
   })

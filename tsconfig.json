@@ -22,7 +22,7 @@
   },
   "include": [
     "src",
-    "./src/config/files.d.ts"
+    "src/config/env.d.ts"
   ]
 }
 
