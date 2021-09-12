@@ -1,0 +1,36 @@
+// html > body > #root > div > .media
+body, #root{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.media {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+html {
+    height: 100%;
+    display: flex;
+}
+@media only screen and (min-width: 4096px) {
+    .media{
+        width: 4096px;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .media{
+        width: 1366px;
+    }
+}
+@media only screen and (min-height: 2160px) {
+    .media{
+        height: 2160px;
+    }
+}
+@media only screen and (max-height: 768px) {
+    .media{
+        height: 768px;
+    }
+}
